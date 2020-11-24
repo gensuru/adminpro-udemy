@@ -6,12 +6,20 @@ import { PagesComponent } from './pages.component';
 import { SharedModule } from '../shared/shared.module';
 import { PAGES_ROUTES } from './pages.routes';
 
+import { FormsModule } from '@angular/forms';
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+
+import { ChartsModule } from 'ng2-charts';
+import { GraficoDonnaComponent } from '../components/grafico-donna/grafico-donna.component';
+
 @NgModule({
     declarations:[
         PagesComponent,
         DashboardComponent,
         Graficas1Component,
-        ProgressComponent
+        ProgressComponent,
+        IncrementadorComponent,
+        GraficoDonnaComponent
     ], 
     exports:[
         DashboardComponent,
@@ -20,7 +28,9 @@ import { PAGES_ROUTES } from './pages.routes';
     ],
     imports:[
         SharedModule,
-        PAGES_ROUTES
-        ]
+        PAGES_ROUTES,
+        FormsModule,
+        ChartsModule
+    ]
 })
 export class PagesModule{ }
